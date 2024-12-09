@@ -4,11 +4,11 @@ on:
   push:
     branches:
       - main
-  workflow_dispatch: # Дозволяє ручний запуск
+  workflow_dispatch: 
 
 jobs:
   build:
-    runs-on: ubuntu-latest # Операційна система
+    runs-on: ubuntu-latest 
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -16,7 +16,7 @@ jobs:
       - name: Set up Java
         uses: actions/setup-java@v3
         with:
-          distribution: 'temurin' # Використовується Temurin JDK
+          distribution: 'temurin' 
           java-version: '11'
 
       - name: Cache Maven dependencies
